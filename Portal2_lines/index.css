@@ -1,0 +1,124 @@
+body, html {
+    font-size: 110%;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Comic Sans', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100%;
+    margin: 0;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/181/468/46/portal-game-glados-portal-2-wallpaper-preview.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Arial Black', Arial, sans-serif;
+    margin: 1%;
+}
+
+button {
+    color: rgb(155, 207, 255);
+    background-color: rgb(20, 20, 145);
+    font-family: monospace;
+    font-size: 110%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 0.55em;
+    padding: 3px;
+    display: inline-block;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+button:hover {
+    background-color: rgb(0, 115, 255);
+    color: rgb(175, 255, 255);
+}
+
+span {
+    font-size: 110%;
+}
+
+u {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+ul {
+    margin: 5px;
+}
+
+a {
+    color:rgb(0, 151, 151);
+}
+
+span {
+    font-family: monospace;
+}
+
+.space {
+    margin-bottom: 60%;
+}
+
+.group {
+    margin: 10px;
+    padding: 15px;
+    background-color: rgba(100, 100, 100, 0.75);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 12px;
+}
+
+.bigGroup {
+    margin: 30px;
+    padding: 15px;
+    background-color: rgba(50, 50, 50, 0.7);
+    backdrop-filter: blur(8px);
+}
+
+.bookend {
+    margin: 0px;
+    padding: 15px;
+    background-color: rgba(50, 50, 50, 0.9);
+    color: rgb(200, 200, 205);
+    backdrop-filter: blur(1.7px);
+}
+
+.topbar {
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    width: 100%; /* Since it no longer overflows */
+}
+
+@keyframes popup {
+    0% {bottom: -10%; visibility: visible;}
+    25% {bottom: 10%;}
+    75% {bottom: 10%;}
+    100% {bottom: -10%;}
+}
+
+#scroll {
+    font-size: 180%;
+    color:rgb(0, 200, 200);
+    margin: 5px;
+    position: fixed;
+    right: 10%;
+    animation-name: popup;
+    animation-duration: 5000ms;
+    animation-delay: 3000ms;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.arrow {
+    display: inline-block;
+    border: solid rgb(0, 200, 200);
+    border-width: 0 4px 4px 0;
+    padding: 7px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: relative;
+    bottom: 4px;
+    left: 7px;
+}

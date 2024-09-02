@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portal 2 voice lines</title>
+
+	<script src="index.js"></script>
+	<link/ rel="stylesheet" href="index.css">
+	<script src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js"></script>
+
+</head>
+
+<body onload="move_topbar();">
+	<div id="main">
+
+		<div class="space"></div>
+		<div id="upperBar" class="bookend topbar">
+			<button onclick="reset();">reset quotes audio</button>
+			<button onclick="play_music();" id="music button">Play Background Music</button>
+			<br/>
+			<header>PORTAL 2 VOICE LINES AND QUOTES COMPILATION</header>
+		</div>
+
+		<div id="scroll">scroll down<div class="arrow"></div></div>
+
+		<script>
+			//create html layout:
+			for (let title in all_sounds) {
+				create_quote_elements(title);
+			};
+		</script>
+
+		<div id="lowerBar" class="bookend">
+			<p>Credit to Valve, the creators of Portal 2.<br/>
+				Credit to <a href="https://theportalwiki.com/wiki/Main_Page">PortalWiki</a> for <a href="https://theportalwiki.com/wiki/GLaDOS_voice_lines_(Portal_2)">GLaDOS</a>, <a href="https://theportalwiki.com/wiki/Wheatley_voice_lines">Wheatley</a>, <a href="https://theportalwiki.com/wiki/Cave_Johnson_voice_lines">Cave Johnson</a>, <a href="https://theportalwiki.com/wiki/Announcer_voice_lines">Announcer</a>, and <a href="https://theportalwiki.com/wiki/Core_voice_lines">Core</a> voice line audio.<br/>
+				If you encounter any inconsistencies or glitches with this webpage and its content, please do not hesitate to contact the author of the webpage.
+			</p>
+		</div>
+	</div>
+</body>
+</html>
