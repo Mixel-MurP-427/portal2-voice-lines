@@ -1061,22 +1061,23 @@ function play_sequence(name, biggerName) {
 var music_counter = 'unused';
 var music;
 const background_music = [
-    ['Playing: 9999999, 1 of 9', 'https:/\/i1.theportalwiki.net/img/7/73/Portal2-03-999999.mp3'],
-    ['Playing: Ghost of Rattman, 2 of 9', 'https:/\/i1.theportalwiki.net/img/9/9e/Portal2-07-Ghost_of_Rattman.mp3'],
-    ['Playing: I Saw a Deer Today, 3 of 9', 'https:/\/i1.theportalwiki.net/img/5/55/Portal2-15-I_Saw_a_Deer_Today.mp3'],
-    ['Playing: An Accent Beyond, 4 of 9', 'https:/\/i1.theportalwiki.net/img/5/50/Portal2-04-An_Accent_Beyond.mp3'],
-    ['Playing: Bots Build Bots, 5 of 9', 'https:/\/i1.theportalwiki.net/img/9/97/Portal2-03-Bots_Build_Bots.mp3'],
-    ['Playing: Music of the Spheres, 6 of 9', 'https:/\/i1.theportalwiki.net/img/4/4a/Portal2-13-Music_Of_The_Spheres.mp3'],
-    ['Playing: Forwarding the Cause of Science, 7 of 9', 'https:/\/i1.theportalwiki.net/img/7/70/Portal2-15-Forwarding_The_Cause_Of_Science.mp3'],
-    ['Playing: The Part Where He Kills You, 8 of 9', 'https:/\/i1.theportalwiki.net/img/9/92/Portal2-07-The_Part_Where_He_Kills_You.mp3'],
-    ['Playing: Cara Mia Addio!, 9 of 9', 'https:/\/i1.theportalwiki.net/img/b/b8/Portal2-12-Cara_Mia_Addio.mp3']
+    ['Playing: The Courtesy Call, 1 of 10', 'https:/\/i1.theportalwiki.net/img/b/b4/Portal2-04-The_Courtesy_Call.mp3'],
+    ['Playing: 9999999, 2 of 10', 'https:/\/i1.theportalwiki.net/img/7/73/Portal2-03-999999.mp3'],
+    ['Playing: Ghost of Rattman, 3 of 10', 'https:/\/i1.theportalwiki.net/img/9/9e/Portal2-07-Ghost_of_Rattman.mp3'],
+    ['Playing: I Saw a Deer Today, 4 of 10', 'https:/\/i1.theportalwiki.net/img/5/55/Portal2-15-I_Saw_a_Deer_Today.mp3'],
+    ['Playing: An Accent Beyond, 5 of 10', 'https:/\/i1.theportalwiki.net/img/5/50/Portal2-04-An_Accent_Beyond.mp3'],
+    ['Playing: Bots Build Bots, 6 of 10', 'https:/\/i1.theportalwiki.net/img/9/97/Portal2-03-Bots_Build_Bots.mp3'],
+    ['Playing: Music of the Spheres, 7 of 10', 'https:/\/i1.theportalwiki.net/img/4/4a/Portal2-13-Music_Of_The_Spheres.mp3'],
+    ['Playing: Forwarding the Cause of Science, 8 of 10', 'https:/\/i1.theportalwiki.net/img/7/70/Portal2-15-Forwarding_The_Cause_Of_Science.mp3'],
+    ['Playing: The Part Where He Kills You, 9 of 10', 'https:/\/i1.theportalwiki.net/img/9/92/Portal2-07-The_Part_Where_He_Kills_You.mp3'],
+    ['Playing: Cara Mia Addio!, 10 of 10', 'https:/\/i1.theportalwiki.net/img/b/b8/Portal2-12-Cara_Mia_Addio.mp3']
 
 ];
 function play_music() {
     if (music_counter==='unused') {music_counter=-1}
     else {music.stop();};
     music_counter++;
-    if(music_counter===9) {
+    if(music_counter===10) {//change int for number of songs
         music_counter = -1;
         document.getElementById('music button').innerHTML = 'none playing';
     }
@@ -1112,6 +1113,8 @@ function show(name, nameBig) {
         document.getElementById(name + ' show').innerHTML = "hide script";
     };
 };
+
+//TODO function hide_all() {};
 
 function create_quote_elements(BigName) {
     //create big group
