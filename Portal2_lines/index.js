@@ -1006,15 +1006,6 @@ const lines = {
     }
 };
 
-//setup show_hide keys
-var show_hide = {};
-for (let title in all_sounds) {
-    show_hide[title] = {};
-    for (let abutton in title) {
-        show_hide[title][abutton] = false;
-    };
-};
-
 var current_sound = 'nothing';
 var sound
 function play_sequence(name, biggerName) {
@@ -1101,20 +1092,37 @@ function reset() {
     };
 };
 
+//setup show_hide keys
+var show_hide = {};
+for (let title in all_sounds) {
+    show_hide[title] = {};
+    for (let abutton in all_sounds[title]) {
+        show_hide[title][abutton] = false;
+    };
+};
+
 function show(name, nameBig) {
-    if (show_hide[name]) {
-        show_hide[name] = false;
+    if (show_hide[nameBig][name]) {
+        show_hide[nameBig][name] = false;
         document.getElementById(name + ' quotes').style = "display: none;";
         document.getElementById(name + ' show').innerHTML = "show script";
     }
     else {
-        show_hide[name] = true;
+        show_hide[nameBig][name] = true;
         document.getElementById(name + ' quotes').style = "display: block;";
         document.getElementById(name + ' show').innerHTML = "hide script";
     };
 };
 
-//TODO function hide_all() {};
+//TODO
+function hide_all() {
+    for (let nameBig in show_hide) {
+        for (let name in show_hide[nameBig]) {
+            if (show_hide[nameBig][name]) {
+                show_hide[nameBig][name] = false;
+                document.getElementById(name + ' quotes').style = "display: none;";
+                document.getElementById(name + ' show').innerHTML = "show script";
+}}}};
 
 function create_quote_elements(BigName) {
     //create big group
@@ -1128,7 +1136,6 @@ function create_quote_elements(BigName) {
         <div class="group" id="${ID_name}">
           <button onclick="play_sequence(\`${ID_name}\`, \`${BigName}\`);" id="${ID_name} button">${ID_name}</button>
           <span id="${ID_name} counter"></span>
-          <br/>
           <u onclick="show(\`${ID_name}\`, \`${BigName}\`)" id="${ID_name} show">show script</u>
           <ul id="${ID_name} quotes" style="display:none;">${lines[BigName][ID_name]}</ul>
         </div>

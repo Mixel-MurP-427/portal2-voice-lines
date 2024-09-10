@@ -35,14 +35,19 @@ button:hover {
     color: rgb(175, 255, 255);
 }
 
+#upperBar > div > button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 span {
     font-size: 110%;
     font-family: monospace;
 }
 
 u {
-    display: inline-block;
-    margin: 5px;
+    display: block;
+    margin: 6px;
     cursor: pointer;
 }
 
