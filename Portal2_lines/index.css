@@ -1,6 +1,7 @@
 body, html {
-    font-size: 110%;
+    font-size: 15.2pt;
     font-family:'Gill Sans', 'Gill Sans MT', 'Comic Sans', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
     height: 100%;
     margin: 0;
     background-image: url("https://c4.wallpaperflare.com/wallpaper/181/468/46/portal-game-glados-portal-2-wallpaper-preview.jpg");
@@ -14,14 +15,13 @@ header {
     text-align: center;
     font-size: 150%;
     font-family: 'Arial Black', Arial, sans-serif;
-    margin: 1%;
 }
 
 button {
     color: rgb(155, 207, 255);
     background-color: rgb(20, 20, 145);
     font-family: monospace;
-    font-size: 110%;
+    font-size: 100%;
     text-align: center;
     border: 1px solid black;
     border-radius: 0.55em;
@@ -41,12 +41,11 @@ button:hover {
 }
 
 span {
-    font-size: 110%;
     font-family: monospace;
 }
 
 u {
-    display: block;
+    display: inline-block;
     margin: 6px;
     cursor: pointer;
 }
@@ -60,7 +59,7 @@ a {
 }
 
 .space {
-    margin-bottom: 60%;
+    margin-bottom: 101vh;
 }
 
 .group {
@@ -99,25 +98,26 @@ a {
     position: fixed;
     top: 0px;
     z-index: 1;
-    width: 100%; /* Since it no longer overflows */
+    width: 98vw; /* Since it no longer overflows */
+    font-size: calc(8px + 0.9vw);
 }
 
 @keyframes popup {
-    0% {bottom: -10%; visibility: visible;}
-    25% {bottom: 10%;}
-    75% {bottom: 10%;}
-    100% {bottom: -10%;}
+    0% {bottom: -10lvh; visibility: visible;}
+    25% {bottom: 10lvh;}
+    75% {bottom: 10lvh;}
+    100% {bottom: -10lvh;}
 }
 
 #scroll {
-    font-size: 180%;
+    font-size: 34px;
     color:rgb(0, 200, 200);
     margin: 5px;
     position: fixed;
     right: 10%;
     animation-name: popup;
     animation-duration: 5000ms;
-    animation-delay: 3000ms;
+    animation-delay: 2500ms;
     visibility: hidden;
     z-index: 1;
 }
@@ -132,4 +132,21 @@ a {
     position: relative;
     bottom: 4px;
     left: 7px;
+}
+
+@media (width <= 550px) { /* makes margins and such more compact to fit mobile screen */
+    .bigGroup {
+        margin: 12px !important;
+        padding: 10px !important;
+    }
+    ul {
+        margin: 0 !important;
+        padding: 18px !important;
+        padding-right: 1px !important;
+    }
+    .group {
+        padding-right: 4px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 }

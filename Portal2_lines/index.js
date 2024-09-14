@@ -1136,6 +1136,7 @@ function create_quote_elements(BigName) {
         <div class="group" id="${ID_name}">
           <button onclick="play_sequence(\`${ID_name}\`, \`${BigName}\`);" id="${ID_name} button">${ID_name}</button>
           <span id="${ID_name} counter"></span>
+          <br/>
           <u onclick="show(\`${ID_name}\`, \`${BigName}\`)" id="${ID_name} show">show script</u>
           <ul id="${ID_name} quotes" style="display:none;">${lines[BigName][ID_name]}</ul>
         </div>
