@@ -1161,12 +1161,11 @@ function move_topbar () {
     var difference;
     var cssTop = 0;
     var barSize = -UpperBarElement.offsetHeight;
-    window.addEventListener('resize', function(){
-        barSize = -UpperBarElement.offsetHeight;
-    });
+
     window.addEventListener("scroll", function(){
         scrollPosition = window.scrollY;
         difference = lastScroll - scrollPosition;
+        barSize = -UpperBarElement.offsetHeight;
 
         cssTop += difference * 1.3;//float is a speed accelerator
         if(cssTop>0){cssTop=0}else if(cssTop<barSize){cssTop=barSize};//prevents bar from moving too far
