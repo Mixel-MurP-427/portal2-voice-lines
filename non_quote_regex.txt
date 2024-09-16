@@ -1,0 +1,3 @@
+Matches all li elements that do not contain double-quote characters.
+
+<li>[^"]*</li>
