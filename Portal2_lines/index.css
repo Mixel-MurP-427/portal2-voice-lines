@@ -54,6 +54,14 @@ ul {
     margin: 5px;
 }
 
+li {
+    cursor: pointer;
+}
+
+div > li {
+    cursor: auto !important;
+}
+
 a {
     color:rgb(0, 151, 151);
 }
@@ -132,6 +140,10 @@ a {
     position: relative;
     bottom: 4px;
     left: 7px;
+}
+
+.highlighted {
+    color:rgb(0, 200, 200);
 }
 
 @media (width <= 550px) { /* makes margins and such more compact to fit mobile screen */

@@ -1,5 +1,4 @@
-
-const lines = {
+const lines = {//TODO add more divs and increase spaces
     'Ha! Death trap!!': {
         'Test Chamber 75': `
             <li>[Chapter 9] Wheatley: "Hold on, hold on, hold on... Almost there..."</li>
@@ -86,7 +85,7 @@ const lines = {
 
     'GLaDOS reawakens': {
         "Oh, it's you.": `
-        <li>GLaDOS: [chapter 1] "Oh... It's <i>you</i>."</li>
+        <li>[chapter 1] GLaDOS: "Oh... It's <i>you</i>."</li>
         <li>Wheatley: "You KNOW her?"</li>
         <li>GLaDOS: "It's been a long time. How have you been?"</li>
         <li>GLaDOS: "I've been really busy being dead. You know, after you MURDERED ME."</li>
@@ -115,7 +114,7 @@ const lines = {
             `,
         'Train Horn': `
             <li>GLaDOS: "Did you know that people with guilty consciences are more easily startled by loud noises--[train horn]--"</li>
-            <li>"I'm sorry, I don't know why that went off. Anyway, just an interesting science fact.">/li>
+            <li>"I'm sorry, I don't know why that went off. Anyway, just an interesting science fact."</li>
             `,
         'Turrets—remember them?': `
             <li>GLaDOS: "This next test involves turrets. You remember them, right? They're the pale spherical things that are full of bullets. Oh wait. That's you in five seconds. Good luck."</li>
@@ -318,7 +317,8 @@ const lines = {
             `,
         'lethal military androids': `
             <li>"Some emergency testing may require prolonged interaction with lethal military androids. Rest assured that all lethal military androids have been taught to read and provided with one copy of the Laws of Robotics. To share."</li>
-            <li>[test subject completes test] "Good. If you feel that a lethal military android has not respected your rights as detailed in the Laws of Robotics, please note it on your self-reporting form. A future Aperture Science Entitlement Associate will initiate the appropriate grievance-filing paperwork."</li>
+            <div><li>[test subject completes test]</li></div>
+            <li>"Good. If you feel that a lethal military android has not respected your rights as detailed in the Laws of Robotics, please note it on your self-reporting form. A future Aperture Science Entitlement Associate will initiate the appropriate grievance-filing paperwork."</li>
             `,
         'misc lines (unordered)': `
             <li>"We are currently experiencing technical difficulties due to circumstances of potentially apocalyptic significance beyond our control."</li>
@@ -343,5 +343,65 @@ const lines = {
         "<li>\"QUICK: WHAT'S THE SITUATION? Oh, hey, hi pretty lady. My name's Rick. So, you out having a little adventure?\"</li><li>\"What, are you fighting that guy? You got that under control? You know, because, looks like there's a lot of stuff on fire...\"</li><li>\"Hey, a countdown clock! Man, that is trouble. Situation's looking pretty ugly. For such a beautiful woman. If you don't mind me saying.\"</li><li>\"I don't want to scare you, but, I'm an Adventure Sphere. Designed for danger. So, why don't you go ahead and have yourself a little lady break, and I'll just take it from here.\"</li><li>\"Here, stand behind me. Yeah, just like that. Just like you're doing. Things are about to get real messy.\"</li><li>\"Going for it yourself, huh? All right, angel. I'll do what I can to cover you.\"</li><li>\"Doesn't bother me. I gotta say, the view's mighty nice from right here.\"</li><li>\"Man, that clock is moving fast. And you are beautiful. Always time to compliment a pretty lady. All right, back to work. Let's do this.\"</li><li>\"I'll tell ya, it's times like this I wish I had a waist so I could wear all my black belts. Yeah, I'm a black belt. In pretty much everything. Karate. Larate. Jiu Jitsu. Kick punching. Belt making. Taekwondo... Bedroom.\"</li><li>\"I am a coiled spring right now. Tension and power. Just... I'm a muscle. Like a big arm muscle, punching through a brick wall, and it's hitting the wall so hard the arm is catching on fire. Oh yeah.\"</li><li>\"I probably wouldn't have let things get this far, but you go ahead and do things your way.\"</li><li>\"Tell ya what, why don't you put me down and I'll make a distraction.\"</li><li>\"All right. You create a distraction then, and I'll distract him from YOUR distraction.\"</li><li>\"Do you have a gun? Because I should really have a gun. What is that thing you're holding?\"</li><li>\"How about a knife, then? You keep the gun, I'll use a knife.\"</li><li>\"No knife? That's fine. I know all about pressure points.\"</li><li>\"So, when you kill that guy, do you have a cool line? You know, prepared? Tell you what: Lemme help you with that while you run around.\"</li><li>\"Okay, let's see. Cool line... He's... big. He's... just hangin' there. Okay. Yeah, all right, here we go: 'Hang around.' That might be too easy.\"</li><li>\"Hang ten?' That might work if there were ten of him. Do you think there might be nine more of this guy somewhere?\"</li><li>\"All right, you know what, it's gonna be best if you can get him to say something first. It's just better if I have a set-up.\"</li><li>\"Here's the plan: Get him to say, 'You two have been a thorn in my side long enough.' Then tell your pretty ears to stand back, because I am going to zing him into the stone age.\"</li><li>\"Did you hear that? I think something just exploded. Man, we are in a lot of danger. This is like Christmas. No, it's better than Christmas. This should be its own holiday. Explosion Day!\"</li><li>\"Happy Explosion Day, gorgeous.\"</li><li>\"Get dirty with this robot! This robot owes you money! This robot owes! You! Money!\"</li><li>\"Here, let me put on some adventure music.\"</li><li>\"Dun-dun-dun-dun-dun-dun-DUN! DUN DUN! Dunna-dunna-na-dunna-na-DUN! DUN DUN! nananaDUNDUNDUN dun-dun-dun-dun-dun-dun...\"</li><li>\"Dun-dun-dun-dun-dun-dun-action and adventure-dunna-dunna-na-dunna-na-playing by our own rules-nanana-hanging by our fingers from a mountain-dun-dun-dun-dun-dun-dun...\"</li><div><li>The following lines are not used in the game:</li></div><li>\"Don't forget! Thorn! Side!\"</li><li>\"Yeah? Well this thorn... is about to take you down.' Man, that sounded a whole lot better in my head.\"</li><li>\"QUICK: WHAT'S THE SITUATION? Oh, hello angel. I guess I must have died and gone to heaven. Name's Rick. So, you out having yourself a little adventure?\"</li><li>\"Here's the plan: Get him to say, 'You two have been a thorn in my side long enough.' Then tell your pretty ears to stand back, because I am going to zing him into space.\"</li><li>\"Yeah? Well this thorn... is about to take you down.' Oh yeah!\"</li><li>\"Okay, have it your way. What, are you fighting that guy? You got that under control there? Cuz it looks like there's a lot of stuff on fire...\"</li><li>\"Kick him! Or punch him. You're the boss, dimples.\"</li><li>\"Yeah! Nice!\"</li><li>\"You messed with the wrong woman!\"</li><li>\"Yeah! How'd you like that?\"</li><li>\"How's that taste, pal?\"</li><li>\"Keep it up, baby! You're creamin' him!\"</li><li>\"Duck and weave, duck and weave! Ohh, the sweet science.\"</li><li>\"You're doing great!\"</li><li>\"Come on, sweetie! He's got a glass jaw! He's got a glass everything! This guy's a china cabinet!\"</li><li>\"This ain't Marquis of Queensberry Rules, sweetie! Pour on the mustard!\"</li><li>\"Shake it off! Shake it off!\"</li><li>\"Pfff. I guess.\"</li><li>\"Pff. Whatever.\"</li><li>\"Oh, shut up!\"</li><li>\"Nobody cares, four eyes.\"</li><li>\"Tell it to the bad guy. Maybe you'll make him so bored his brain'll explode.\"</li><li>\"You know who found that interesting? Nobody. That didn't affect anybody's life in any way whatsoever. Life would be exactly the same if you hadn't said anything.\"</li><li>\"You ever notice how nobody stops what they're doing to listen? We don't care.\"</li><li>\"Say one useful thing. One. I dare you. I will give you a hundred dollars if you say one thing remotely applicable to anything at all.\"</li><li>\"Oh shut up!\"</li><li>\"There's nothing in space! That's why it's space!\"</li><li>\"Oh, really? Space? Really? You should have said something! We had no idea!\"</li><li>\"You know what I hope's in space? Fire. I hope you go to space and catch on fire.\"</li>",
         'Fact Core': 
         "<li>\"The situation you are in is very dangerous.\"</li><li>\"The likelihood of you dying within the next five minutes is eighty-seven point six one percent.\"</li><li>\"The likelihood of you dying violently within the next five minutes is eighty-seven point six one percent.\"</li><li>\"You are about to get me killed.\"</li><li>\"We will both die because of your negligence.\"</li><li>\"This is a bad plan. You will fail.\"</li><li>\"He will most likely kill you, violently.\"</li><li>\"He will most likely kill you.\"</li><li>\"You will be dead soon.\"</li><li>\"This situation is hopeless.\"</li><li>\"You are going to die in this room.\"</li><li>\"You could stand to lose a few pounds.\"</li><li>\"The Fact Sphere is the most intelligent sphere.\"</li><li>\"The Fact Sphere is the most handsome sphere.\"</li><li>\"The Fact Sphere is incredibly handsome.\"</li><li>\"The Fact Sphere is always right.\"</li><li>\"The Adventure Sphere is a blowhard and a coward.\"</li><li>\"The Space Sphere will never go to space.\"</li><li>\"You will never go into space.\"</li><li>\"Fact: Space does not exist.\"</li><li>\"Spheres that insist on going into space are inferior to spheres that don't.\"</li><li>\"The Fact Sphere is a good person, whose insights are relevant.\"</li><li>\"The Fact Sphere is a good sphere, with many friends.\"</li><li>\"Whoever wins this battle is clearly superior, and will earn the allegiance of the Fact Sphere.\"</li><li>\"The Fact Sphere is not defective. Its facts are wholly accurate and very interesting.\"</li><li>\"Twelve. Twelve. Twelve. Twelve. Twelve. Twelve. Twelve. Twelve. Twelve. Twelve.\"</li><li>\"Pens. Pens. Pens. Pens. Pens. Pens. Pens.\"</li><li>\"Apples. Oranges. Pears. Plums. Kumquats. Tangerines. Lemons. Limes. Avocado. Tomato. Banana. Papaya. Guava.\"</li><li>\"Error. Error. Error. File not found.\"</li><li>\"Error. Error. Error. Fact not found.\"</li><li>\"Fact not found.\"</li><li>\"Corruption at 25%\"</li><li>\"Corruption at 50%\"</li><li>\"Warning, sphere corruption at twenty-- rats cannot throw up.\"</li><li>\"Dental floss has superb tensile strength.\"</li><li>\"The square root of rope is string.\"</li><li>\"While the submarine is vastly superior to the boat in every way, over 97% of people still use boats for aquatic transportation.\"</li><li>\"Cellular phones will not give you cancer. Only hepatitis.\"</li><li>\"Pants were invented by sailors in the sixteenth century to avoid Poseidon's wrath. It was believed that the sight of naked sailors angered the sea god.\"</li><li>\"The atomic weight of Germanium is seven two point six four.\"</li><li>\"89% of magic tricks are not magic. Technically, they are sorcery.\"</li><li>\"An ostrich's eye is bigger than its brain.\"</li><li>\"In Greek myth, the craftsman Daedalus invented human flight so a group of Minotaurs would stop teasing him about it.\"</li><li>\"Humans can survive underwater. But not for very long.\"</li><li>\"Raseph, the Semitic god of war and plague, had a gazelle growing out of his forehead.\"</li><li>\"The plural of surgeon general is surgeons general. The past tense of surgeons general is surgeonsed general.\"</li><li>\"Polymerase I polypeptide A is a human gene.\"</li><li>\"Rats cannot throw up.\"</li><li>\"Iguanas can stay underwater for twenty-eight point seven minutes.\"</li><li>\"Human tapeworms can grow up to twenty-two point nine meters.\"</li><li>\"The Schrodinger's cat paradox outlines a situation in which a cat in a box must be considered, for all intents and purposes, simultaneously alive and dead. Schrodinger created this paradox as a justification for killing cats.\"</li><li>\"Every square inch of the human body has 32 million bacteria on it.\"</li><li>\"The Sun is 330,330 times larger than Earth.\"</li><li>\"The average life expectancy of a rhinoceros in captivity is 15 years.\"</li><li>\"Volcano-ologists are experts in the study of volcanoes.\"</li><li>\"Avocados have the highest fiber and calories of any fruit.\"</li><li>\"Avocados have the highest fiber and calories of any fruit. They are found in Australians.\"</li><li>\"The moon orbits the Earth every 27.32 days.\"</li><li>\"The billionth digit of Pi is 9.\"</li><li>\"If you have trouble with simple counting, use the following mnemonic device: one comes before two comes before 60 comes after 12 comes before six trillion comes after 504. This will make your earlier counting difficulties seem like no big deal.\"</li><li>\"A gallon of water weighs 8.34 pounds\"</li><li>\"Hot water freezes quicker than cold water.\"</li><li>\"Honey does not spoil.\"</li><li>\"The average adult body contains half a pound of salt.\"</li><li>\"A nanosecond lasts one billionth of a second.\"</li><li>\"According to Norse legend, thunder god Thor's chariot was pulled across the sky by two goats.\"</li><li>\"China produces the world's second largest crop of soybeans.\"</li><li>\"Tungsten has the highest melting point of any metal, at 3,410 degrees Celsius.\"</li><li>\"Gently cleaning the tongue twice a day is the most effective way to fight bad breath.\"</li><li>\"The Tariff Act of 1789, established to protect domestic manufacture, was the second statute ever enacted by the United States government.\"</li><li>\"The value of Pi is the ratio of any circle's circumference to its diameter in Euclidean space.\"</li><li>\"The Mexican-American War ended in 1848 with the signing of the Treaty of Guadalupe Hidalgo.\"</li><li>\"In 1879, Sandford Fleming first proposed the adoption of worldwide standardized time zones at the Royal Canadian Institute.\"</li><li>\"Marie Curie invented the theory of radioactivity, the treatment of radioactivity, and dying of radioactivity.\"</li><li>\"At the end of The Seagull by Anton Chekhov, Konstantin kills himself.\"</li><li>\"Contrary to popular belief, the Eskimo does not have one hundred different words for snow. They do, however, have two hundred and thirty-four words for fudge.\"</li><li>\"In Victorian England, a commoner was not allowed to look directly at the Queen, due to a belief at the time that the poor had the ability to steal thoughts. Science now believes that less than 4% of poor people are able to do this.\"</li><li>\"In 1862, Abraham Lincoln signed the Emancipation Proclamation, freeing the slaves. Like everything he did, Lincoln freed the slaves while sleepwalking, and later had no memory of the event.\"</li><li>\"In 1948, at the request of a dying boy, baseball legend Babe Ruth ate seventy-five hot dogs, then died of hot dog poisoning.\"</li><li>\"It is incorrectly noted that Thomas Edison invented 'push-ups' in 1878. Nikolai Tesla had in fact patented the activity three years earlier, under the name 'Tesla-cize.'\"</li><li>\"Whales are twice as intelligent, and three times as delicious, as humans.\"</li><li>\"The automobile brake was not invented until 1895. Before this, someone had to remain in the car at all times, driving in circles until passengers returned from their errands.\"</li><li>\"Edmund Hillary, the first person to climb Mount Everest, did so accidentally while chasing a bird.\"</li><li>\"Diamonds are made when coal is put under intense pressure. Diamonds put under intense pressure become foam pellets, commonly used today as packing material.\"</li><li>\"The most poisonous fish in the world is the orange ruffy. Everything but its eyes are made of a deadly poison. The ruffy's eyes are composed of a less harmful, deadly poison.\"</li><li>\"The occupation of court jester was invented accidentally, when a vassal's epilepsy was mistaken for capering.\"</li><li>\"Halley's Comet can be viewed orbiting Earth every seventy-six years. For the other seventy-five, it retreats to the heart of the sun, where it hibernates undisturbed.\"</li><li>\"The first commercial airline flight took to the air in 1914. Everyone involved screamed the entire way.\"</li><li>\"In Greek myth, Prometheus stole fire from the Gods and gave it to humankind. The jewelry he kept for himself.\"</li><li>\"The first person to prove that cow's milk is drinkable was very, very thirsty.\"</li><li>\"Before the Wright Brothers invented the airplane, anyone wanting to fly anywhere was required to eat 200 pounds of helium.\"</li><li>\"Before the invention of scrambled eggs in 1912, the typical breakfast was either whole eggs still in the shell or scrambled rocks.\"</li><li>\"During the Great Depression, the Tennessee Valley Authority outlawed pet rabbits, forcing many to hot glue-gun long ears onto their pet mice.\"</li><li>\"At some point in their lives 1 in 6 children will be abducted by the Dutch.\"</li><li>\"According to most advanced algorithms, the world's best name is Craig.\"</li><li>\"To make a photocopier, simply photocopy a mirror.\"</li>"
+    }
+};
+
+
+
+const to_skip = {
+    "GLaDOS reawakens": {
+        "Oh, it's you.": []
+    },
+    "Announcer lines, Chapter 1": {
+        "Relaxation Chamber": [],
+        "The Courtesy Call": [],
+        "Aperture Science Material Emancipation Grill": [],
+        "lethal military androids": [1],
+        "misc lines (unordered)": []
+    },
+    "Roast session": {
+        "Garbage": [],
+        "Train Horn": [],
+        "Turrets—remember them?": [],
+        "That jumpsuit you are wearing...": []
+    },
+    "More testing": {
+        "...methodically knocking people's hats off...": [],
+        "Aerial Faith Plate": []
+    },
+    "The Fall": {
+        "I'm a POTATO": [],
+        "Mantis men": [],
+        "repulsion gel": [],
+        "Cave's crazy experiments": [],
+        "WHY NOT??": [],
+        "$60": []
+    },
+    "Wheatley Labrotories": {
+        "Paradox": [],
+        "TEST": [2, 12, 20],
+        "help?": []
+    },
+    "password?": {
+        "A-A-A-A, um, A": [],
+        "The Hacking monologue": [],
+        "Should have looked into this earlier...": []
+    },
+    "Ha! Death trap!!": {
+        "Test Chamber 75": [],
+        "playing cards": [],
+        "Holmes versus Moriarty...": [],
+        "FOOL!!": [1]
+    },
+    "Cores": {
+        "Curiosity Core": [],
+        "Intelligence Core": [],
+        "Party Escort Bot": [],
+        "Space Core": [],
+        "Adventure Core": [27],
+        "Fact Core": []
+    },
+    "Goodbye!": {
+        "goodbye": []
     }
 };

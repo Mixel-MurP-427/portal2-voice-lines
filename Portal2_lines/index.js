@@ -5,17 +5,35 @@
 var current_sound = 'nothing';
 var sound
 function play_sequence(name, biggerName, start=0) {
-    //create duplicate of url array
-    let sound_list = [...all_sounds[biggerName][name]];
+    //initialize:
+    let sound_list = all_sounds[biggerName][name].slice(start,); //create duplicate of url array and slice
+    let psButton = document.getElementById(name + ' button');
+    let psCounter = document.getElementById(name + ' counter');
+    let psUl = document.getElementById(name + ' quotes');
+    let totalLength = all_sounds[biggerName][name].length;
 
-    //reset vars and kill any audio playing
-    document.getElementById(name + ' button').disabled = true;
-    document.getElementById(name + ' counter').innerText = '  1 of ' + all_sounds[biggerName][name].length;
+    //create list of li elements to be highlighted. If true, then highlight.
+    let quoteElements = new Array(totalLength + to_skip[biggerName][name].length).fill(true);
+    for (let not_li of to_skip[biggerName][name]) {
+        quoteElements[not_li] = false;
+    };
+    //quoteElements.slice(start,);
+    var current_quote = start;
+    for (aBool of quoteElements.slice(current_quote,)) {
+        if (aBool){break;}
+        current_quote++;
+    };
+
+    //reset vars, counters, highlights, and kill any audio playing
     if (current_sound!='nothing') {
+        sound.stop();
         document.getElementById(current_sound + ' button').disabled = false;
         document.getElementById(current_sound + ' counter').innerText = '';
-        sound.stop();
+        document.body.querySelector('.highlighted').classList.remove("highlighted");
     };
+    psButton.disabled = true;
+    psCounter.innerText = `  ${start+1} of ${totalLength}`;
+    psUl.children[current_quote].classList.add("highlighted");
 
     current_sound = name;
 
@@ -26,40 +44,39 @@ function play_sequence(name, biggerName, start=0) {
           src: [url_list[0]],
           volume: 1,
           onend: function() {
+
             url_list.shift();
-            if (url_list.length > 0) {
-                document.getElementById(name + ' counter').innerText = '  ' + (all_sounds[biggerName][name].length - url_list.length +1) + ' of ' + all_sounds[biggerName][name].length;
+            //not looping enough?
+            for (i in sound_list+2) {//the amount of iterations is arbitrary. This could just as easily be a while (true) loop, but for is safer.
+                current_quote++;
+                if (quoteElements[current_quote]){break;}
+            };
+
+            psUl.querySelector('.highlighted').classList.remove("highlighted");
+            if (url_list.length > 0) {//if not done
+                psCounter.innerText = '  ' + (totalLength - url_list.length +1) + ' of ' + totalLength;
+                psUl.children[current_quote].classList.add("highlighted");
                 play_sound(url_list);
               }
             else {// fires when all audio is done
-                document.getElementById(current_sound + ' button').disabled = false;
-                document.getElementById(name + ' counter').innerText = '';
+                psButton.disabled = false;
+                psCounter.innerText = '';
                 current_sound = 'nothing';
             };
           }
         });
         sound.play();
+        //sound.rate(25);
     };
-    
     //start sound chain:
     play_sound(sound_list);
 };
 
+
+
+
 var music_counter = 'unused';
 var music;
-const background_music = [
-    ['Playing: The Courtesy Call, 1 of 10', 'https:/\/i1.theportalwiki.net/img/b/b4/Portal2-04-The_Courtesy_Call.mp3'],
-    ['Playing: 9999999, 2 of 10', 'https:/\/i1.theportalwiki.net/img/7/73/Portal2-03-999999.mp3'],
-    ['Playing: Ghost of Rattman, 3 of 10', 'https:/\/i1.theportalwiki.net/img/9/9e/Portal2-07-Ghost_of_Rattman.mp3'],
-    ['Playing: I Saw a Deer Today, 4 of 10', 'https:/\/i1.theportalwiki.net/img/5/55/Portal2-15-I_Saw_a_Deer_Today.mp3'],
-    ['Playing: An Accent Beyond, 5 of 10', 'https:/\/i1.theportalwiki.net/img/5/50/Portal2-04-An_Accent_Beyond.mp3'],
-    ['Playing: Bots Build Bots, 6 of 10', 'https:/\/i1.theportalwiki.net/img/9/97/Portal2-03-Bots_Build_Bots.mp3'],
-    ['Playing: Music of the Spheres, 7 of 10', 'https:/\/i1.theportalwiki.net/img/4/4a/Portal2-13-Music_Of_The_Spheres.mp3'],
-    ['Playing: Forwarding the Cause of Science, 8 of 10', 'https:/\/i1.theportalwiki.net/img/7/70/Portal2-15-Forwarding_The_Cause_Of_Science.mp3'],
-    ['Playing: The Part Where He Kills You, 9 of 10', 'https:/\/i1.theportalwiki.net/img/9/92/Portal2-07-The_Part_Where_He_Kills_You.mp3'],
-    ['Playing: Cara Mia Addio!, 10 of 10', 'https:/\/i1.theportalwiki.net/img/b/b8/Portal2-12-Cara_Mia_Addio.mp3']
-
-];
 function play_music() {
     if (music_counter==='unused') {music_counter=-1}
     else {music.stop();};
@@ -83,6 +100,7 @@ function reset() {
     if (current_sound!='nothing') {
         document.getElementById(current_sound + ' button').disabled = false;
         document.getElementById(current_sound + ' counter').innerText = '';
+        document.body.querySelector('.highlighted').classList.remove("highlighted");
         sound.stop();
         current_sound='nothing';
     };
