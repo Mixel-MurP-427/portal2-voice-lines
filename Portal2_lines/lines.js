@@ -85,7 +85,8 @@ const lines = {//TODO add more divs and increase spaces
 
     'GLaDOS reawakens': {
         "Oh, it's you.": `
-        <li>[chapter 1] GLaDOS: "Oh... It's <i>you</i>."</li>
+        <div><li>[chapter 1]</li></div>
+        <li>GLaDOS: "Oh... It's <i>you</i>."</li>
         <li>Wheatley: "You KNOW her?"</li>
         <li>GLaDOS: "It's been a long time. How have you been?"</li>
         <li>GLaDOS: "I've been really busy being dead. You know, after you MURDERED ME."</li>
@@ -105,12 +106,14 @@ const lines = {//TODO add more divs and increase spaces
 
     'Roast session': {
         'Garbage': `
-            <li>[test chamber 6] GLaDOS: "Oh, sorry. I'm still cleaning out the test chambers."</li>
+            <div><li>[test chamber 6]</li></div>
+            <li>GLaDOS: "Oh, sorry. I'm still cleaning out the test chambers."</li>
             <li>"So sometimes there's still trash in them. Standing around. Smelling, and being useless."</li>
             <li>"Try to avoid the garbage hurtling towards you."</li>
             <li>[If the player picks up a trash item] "You don't have to test with the garbage. It's garbage."</li>
             <li>	"Press the button again."</li>
-            <li>[after player completes test] "Remember before when I was talking about smelly garbage standing around being useless? That was a metaphor. I was actually talking about you. And I'm sorry. You didn't react at the time, so I was worried it sailed right over your head. Which would have made this apology seem insane. That's why I had to call you garbage a second time just now."</li>
+            <div><li>[after player completes test]</li></div>
+            <li>"Remember before when I was talking about smelly garbage standing around being useless? That was a metaphor. I was actually talking about you. And I'm sorry. You didn't react at the time, so I was worried it sailed right over your head. Which would have made this apology seem insane. That's why I had to call you garbage a second time just now."</li>
             `,
         'Train Horn': `
             <li>GLaDOS: "Did you know that people with guilty consciences are more easily startled by loud noises--[train horn]--"</li>
@@ -132,15 +135,18 @@ const lines = {//TODO add more divs and increase spaces
             <li>"There. If you have any questions, just <a href="https://i1.theportalwiki.net/img/f/f9/GLaDOS_sp_a2_fizzler_intro05_slowed_down.ogg">remember what I said in slow motion</a>. Test on your own recognizance, I'll be right back."</li>
             `,
         'Aerial Faith Plate': `
-            <li>[test chamber 5] GLaDOS: "This next test involves the Aperture Science Aerial Faith Plate. It was part of an initiative to investigate how well test subjects could solve problems when they were catapulted into space. Results were highly informative: They could not. Good luck!"</li>
-            <li>[test chamber 6] GLaDOS: "Let's see what the next test is. Oh. Advanced Aerial Faith Plates."</li>
+            <div><li>[test chamber 5]</li></div>
+            <li>GLaDOS: "This next test involves the Aperture Science Aerial Faith Plate. It was part of an initiative to investigate how well test subjects could solve problems when they were catapulted into space. Results were highly informative: They could not. Good luck!"</li>
+            <div><li>[test chamber 6]</li></div>
+            <li>GLaDOS: "Let's see what the next test is. Oh. Advanced Aerial Faith Plates."</li>
             <li>"Well. Have fun soaring through the air without a care in the world."</li>
             <li>"<i>I</i> have to go to the wing that was made entirely of glass and pick up fifteen acres of broken glass. By myself."</li>
-            <li>[test chamber 9, Chell jumps on faith plate, flies past Wheatley] Wheatley: "Hey! Hey! It's me! I'm okay!"</li>
+            <div><li>[test chamber 9] Chell jumps on faith plate, flies past Wheatley:</li></div>
+            <li>Wheatley: "Hey! Hey! It's me! I'm okay!"</li>
             <li>GLaDOS: "Well, I'm back. The Aerial Faith Plate in here is sending a distress signal."</li>
             <li>GLaDOS: "You broke it, didn't you."</li>
             <li>GLaDOS: "There. Try it now."</li>
-            <li>Wheatley: [Chell flies by again] "You'll never believe what happened! There I was, just lying there, you thought I was done for, but --"</li>
+            <li>Wheatley: [as Chell flies by again] "You'll never believe what happened! There I was, just lying there, you thought I was done for, but --"</li>
             <li>GLaDOS: "Hmm. This Plate must not be calibrated to someone of your... generous... ness. I'll add a few zeros to the maximum weight."</li>
             <li>GLaDOS: "You look great, by the way. Very healthy."</li>
             <li>GLaDOS: "Try it now."</li>
@@ -204,6 +210,7 @@ const lines = {//TODO add more divs and increase spaces
 
     'Wheatley Labrotories': {
         'Paradox': `
+            <div><li></li></div>
             <li>GLaDOS: [chapter 7] "Wait! I've got an idea!"</li>
             <li>GLaDOS: "That poster! Go look at it for a second, would you?"</li>
             <li>GLaDOS: "Paradoxes."</li>
@@ -214,6 +221,7 @@ const lines = {//TODO add more divs and increase spaces
             <li>GLaDOS: "Probably."</li>
             <li>GLaDOS: "Okay, so it's not the most watertight plan to go confront an omnipotent power-mad A.I. with."</li>
             <li>GLaDOS: "Still. It's a better plan than exploding. Marginally."</li>
+            <div><li></li></div>
             <li>Wheatley: [chapter 8, speaking to Frankenturrets] "For god's sake, you're BOXES with LEGS! It is literally your only purpose! Walking onto buttons! How can you not do the one thing you were designed for?"</li>
             <li>Wheatley: "Warmer. Warrrrmer. Boiling hot. Boiling--okay, colder. Ice cold. Arctic. Very very very cold LOOK JUST GET ON THE BUTTON!"</li>
             <li>Wheatley: "Oh, that's funny, is it? Because we've been at this twelve hours and you haven't solved it either, so I don't know why you're laughing."</li>
@@ -246,6 +254,7 @@ const lines = {//TODO add more divs and increase spaces
             <li>GLaDOS: "Luckily, by the looks of things he knows as much about test building as he does about logical contradictions."</li>
             `,
         'TEST': `
+            <div><li></li></div>
             <li>[chapter 8] Wheatley: "Designed this test myself. It's a little bit difficult."</li>
             <li>"Notice the moat area. Very deadly. Extremely dangerous. Eventually. Not at the moment. Still working on it, still working on it."</li>
             <div><li>If Chell stands around:</li></div>
@@ -256,6 +265,7 @@ const lines = {//TODO add more divs and increase spaces
             <li>    "Come on, solve it!"</li>
             <li>    "Sollllve it..."</li>
             <li>    "SOLVE IT! Commanding voice..."</li>
+            <div><li></li></div>
             <li>[Chell presses button and solves test] "Ohhhhh, yes. Ohhhh. Well done."</li>
             <li>"Ohhhhhhh, that's tremendous."</li>
             <div><li>If Chell stands around again:</li></div>
@@ -263,6 +273,7 @@ const lines = {//TODO add more divs and increase spaces
             <li>    "You've still got to get through the door. Please. Need to get through that door there."</li>
             <li>    "Door?"</li>
             <li>    "Finish it..."</li>
+            <div><li></li></div>
             <li>[Chell walks through door] "Oh, that felt really good."</li>
             <li>"Here's an idea, since making tests is difficult--why don't you just keep solving THIS test. Same one. And I can just... watch you solve it. Yes. That sounds much easier."</li>
             <li>"Here we go! Now do it again!"</li>
@@ -272,11 +283,13 @@ const lines = {//TODO add more divs and increase spaces
             <li>    "Come on, you've already solved it once. Less than a minute ago you solved this puzzle. Do it again, please."</li>
             <li>    "One minute ago. Less than one minute ago you solved this puzzle. Now you're having problems."</li>
             <li>    "You just beat this test. Literally twenty seconds ago."</li>
+            <div><li></li></div>
             <li>[Chell hits button again] "Annnnnnnnd... Nothing."</li>
             <li>"Alright, can't blame me for trying. Okay... New tests, new tests... there's gotta be some tests around here somewhere."</li>
             <li>"Oh! Here we go..."</li>
             `,
         'help?': `
+            <div><li></li></div>
             <li>[chapter 8] Wheatley: "Yeah... Made this test myself. Out of some smaller tests. That I found. Lying around."</li>
             <li>Wheatley: "Jammed 'em all together. Buttons. Got funnels. Bottomless pits are involved. It's got it all, it's absolute dynamite."</li>
             <li>GLaDOS: [after Chell enters test chamber] "I'd love to help you solve the tests. But I can't."</li>
@@ -286,7 +299,8 @@ const lines = {//TODO add more divs and increase spaces
             <li>Wheatley: "You see that button over there? You just need to ARRRRRGH!" [electrocution]</li>
             <li>GLaDOS: "And that's why I can't help you solve these tests."</li>
             <li>Wheatley: "[tired breathing] Nevermind. Nevermind. Solve it yourself. You're on your own."</li>
-            <li>Wheatley: [after Chell solves test] "Oh! Yes. Well done."</li>
+            <div><li></li></div>
+            <li>Wheatley: [after Chell solves test:] "Oh! Yes. Well done."</li>
             <li>GLaDOS: "Thanks!"</li>
             <li>GLaDOS: "All we had to do was pull that lever."</li>
             <li>Wheatley: "What? No, you pressed that bAGGGHHHHHH" [electrocuted again]</li>
@@ -350,7 +364,7 @@ const lines = {//TODO add more divs and increase spaces
 
 const to_skip = {
     "GLaDOS reawakens": {
-        "Oh, it's you.": []
+        "Oh, it's you.": [0]
     },
     "Announcer lines, Chapter 1": {
         "Relaxation Chamber": [],
@@ -360,14 +374,14 @@ const to_skip = {
         "misc lines (unordered)": []
     },
     "Roast session": {
-        "Garbage": [],
+        "Garbage": [0, 6],
         "Train Horn": [],
         "Turrets—remember them?": [],
         "That jumpsuit you are wearing...": []
     },
     "More testing": {
         "...methodically knocking people's hats off...": [],
-        "Aerial Faith Plate": []
+        "Aerial Faith Plate": [0, 2, 6]
     },
     "The Fall": {
         "I'm a POTATO": [],
@@ -377,7 +391,7 @@ const to_skip = {
         "WHY NOT??": [],
         "$60": []
     },
-    "Wheatley Labrotories": {
+    "Wheatley Labrotories": {//TODO check if divs needed starting here
         "Paradox": [],
         "TEST": [2, 12, 20],
         "help?": []

@@ -1,0 +1,8 @@
+Make lis clickable
+    use html onclick
+    Put li clickables inside span
+    include easy way to find og audio file?
+hashtag url argument thingy so that page scrolls to specified part onload
+
+
+Music page
